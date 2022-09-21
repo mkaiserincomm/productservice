@@ -21,7 +21,8 @@
             },
             "env": {
                 "ASPNETCORE_ENVIRONMENT": "Development",
-                "ASPNETCORE_URLS":"http://localhost:5030"
+                "ASPNETCORE_URLS":"http://localhost:5030",
+                "DOTNET_ConnectionStrings__NorthwindContext":"Server=mymssql-mssql-linux.incomm-poc;Database=Northwind;User Id=sa;Password=2t2kpvAinnNnvOafb5g6;MultipleActiveResultSets=true"
             },
             "sourceFileMap": {
                 "/Views": "${workspaceFolder}/Views"
