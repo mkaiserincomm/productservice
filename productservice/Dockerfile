@@ -1,11 +1,11 @@
-FROM mcr.microsoft.com/dotnet/aspnet:5.0-alpine3.14 AS base
+FROM mcr.microsoft.com/dotnet/aspnet:6.0-alpine3.16 AS base
 WORKDIR /app
 EXPOSE 80
 RUN apk add icu-libs
 ENV ASPNETCORE_URLS=http://*:80
 ENV DOTNET_SYSTEM_GLOBALIZATION_INVARIANT=false
 
-FROM mcr.microsoft.com/dotnet/sdk:5.0-alpine3.14 AS build
+FROM mcr.microsoft.com/dotnet/sdk:6.0-alpine3.16 AS build
 ARG SUFFIX
 WORKDIR /src
 COPY ["productservice.csproj", "./"]
